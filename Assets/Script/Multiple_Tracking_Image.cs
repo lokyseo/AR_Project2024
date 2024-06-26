@@ -38,11 +38,16 @@ public class Multiple_Tracking_Image : MonoBehaviour
     private void OnEnable()
     {
         imgManager.trackedImagesChanged += OnImageChanged;
+        spawnedPrefabs["test1"].SetActive(false);
+
     }
 
     private void OnDisable()
     {
         imgManager.trackedImagesChanged -= OnImageChanged;
+
+        spawnedPrefabs["test1"].SetActive(false);
+
     }
 
     private void OnImageChanged(ARTrackedImagesChangedEventArgs args)

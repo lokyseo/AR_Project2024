@@ -16,13 +16,13 @@ public class ARManager : MonoBehaviour
 
     void Update()
     {
-        if(isTrackingSuccess)
-        {
-            this.GetComponent<Multiple_Tracking_Image>().enabled = false;
-            this.GetComponent<ARTrackedImageManager>().enabled = false;
-            Invoke("MoveScene", 2.0f);
-            isTrackingSuccess = false;
-        }
+      //if(isTrackingSuccess)
+      //{
+      //    this.GetComponent<Multiple_Tracking_Image>().enabled = false;
+      //    this.GetComponent<ARTrackedImageManager>().enabled = false;
+      //   // Invoke("MoveScene", 2.0f);
+      //    isTrackingSuccess = false;
+      //}
     }
 
     void MoveScene()

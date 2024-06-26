@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4588049980182159276}
   - component: {fileID: 1804266884670783283}
   - component: {fileID: 5406535875111873224}
-  - component: {fileID: -1028602829919961604}
+  - component: {fileID: 8388171053836470392}
   m_Layer: 0
-  m_Name: Test2_Tracking
+  m_Name: MiniGame1_Explode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738559802617929977}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &4588049980182159276
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52,7 +52,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738559802617929977}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DestroyOnRemoval: 1
---- !u!114 &-1028602829919961604
+--- !u!114 &8388171053836470392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +129,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6738559802617929977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 752ae4b44c6b1574a94873f6217b45fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0de16a7b1cfa196409df946a4b4a44db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

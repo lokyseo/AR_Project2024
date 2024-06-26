@@ -361,6 +361,10 @@ MonoBehaviour:
     prefab: {fileID: 6738559802617929977, guid: 83bbd07e0d7c1e6408775436498b092c, type: 3}
   - name: test2
     prefab: {fileID: 6738559802617929977, guid: b8b47f641c6b72e4791fad8c8dea65e8, type: 3}
+  - name: test3
+    prefab: {fileID: 6738559802617929977, guid: eadf2d70de39aac4dba1262e637875a6, type: 3}
+  - name: test4
+    prefab: {fileID: 6738559802617929977, guid: 251f9bd676d1f6547b920dd547441543, type: 3}
 --- !u!114 &1699610550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699610543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5245fa6eb7c2ec14f8c180c5b79e3330, type: 3}
   m_Name: 

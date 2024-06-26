@@ -5,27 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class Tracked_SceneMove : MonoBehaviour
 {
-
+    float timeCount;
+    private void OnEnable()
+    {
+        timeCount = 1.0f;
+    }
 
     void Start()
     {
-
-        if (this.gameObject.activeSelf)
-        {
-            ARManager.isTrackingSuccess = true;
-            Destroy(this.gameObject);
-
-        }
+        timeCount = 1.0f;
 
     }
 
     void Update()
     {
-        if (this.gameObject.activeSelf)
+        timeCount -= Time.deltaTime;
+        if(timeCount < 0.0f)
         {
-            Destroy(this.gameObject);
-
+            timeCount = 1.0f;
+            SceneManager.LoadScene("Test1_Tracked");
+           
         }
+
 
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Explode_Sphere
   - Card
+  - Failed
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UpUI
   - 
   - 
   - 
