@@ -35,8 +35,9 @@ public class Tracked_SceneMove1 : MonoBehaviour
             {
                 if (this.gameObject.name.Contains("test" + i))
                 {
-                    SceneManager.LoadScene("Test" + i + "_Tracked");
+                    this.gameObject.SetActive(false);
 
+                    SceneManager.LoadScene("Test" + i + "_Tracked");
                 }
             }
             

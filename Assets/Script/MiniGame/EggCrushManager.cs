@@ -27,8 +27,9 @@ public class EggCrushManager : MonoBehaviour
                 {
                     touchCount--;
 
-                    if(touchCount < 0)
+                    if(touchCount <= 0)
                     {
+                        PlayerPrefs.SetInt("MiniGame4Clear", 1);
                         SceneManager.LoadScene("MainScene");
                         textCount.text = "0";
 

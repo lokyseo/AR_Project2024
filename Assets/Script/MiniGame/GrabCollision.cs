@@ -26,6 +26,7 @@ public class GrabCollision : MonoBehaviour
         }
         if(collision.name == "Hand")
         {
+            PlayerPrefs.SetInt("MiniGame5Clear", 1);
             SceneManager.LoadScene("MainScene");
         }
     }

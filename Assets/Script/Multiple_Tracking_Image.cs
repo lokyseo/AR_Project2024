@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 using UnityEngine.XR.ARFoundation;
@@ -35,13 +36,14 @@ public class Multiple_Tracking_Image : MonoBehaviour
         }
     }
 
+
+
     private void OnEnable()
     {
         imgManager.trackedImagesChanged += OnImageChanged;
-        for(int i = 1; i <5; i++)
+        for (int i = 1; i < 5; i++)
         {
-            spawnedPrefabs["test" + i].SetActive(false);
-
+            spawnedPrefabs["test" + i].SetActive(false); 
         }
 
     }
@@ -49,16 +51,12 @@ public class Multiple_Tracking_Image : MonoBehaviour
     private void OnDisable()
     {
         imgManager.trackedImagesChanged -= OnImageChanged;
-        for (int i = 1; i < 5; i++)
-        {
-            spawnedPrefabs["test" + i].SetActive(false);
-
-        }
+       
     }
 
     private void OnImageChanged(ARTrackedImagesChangedEventArgs args)
     {
-
+        
         foreach (ARTrackedImage img in args.added)
         {
             UpdateSpawned(img);
@@ -67,6 +65,7 @@ public class Multiple_Tracking_Image : MonoBehaviour
         foreach (ARTrackedImage img in args.updated)
         {
             UpdateSpawned(img);
+            
         }
 
         foreach (ARTrackedImage img in args.removed)
@@ -81,10 +80,10 @@ public class Multiple_Tracking_Image : MonoBehaviour
         string name = img.referenceImage.name;
 
         GameObject spawned = spawnedPrefabs[name];
+        Debug.Log("Updating image " + img.referenceImage.name + " at " + img.transform.position + "   " + img.trackingState);
 
         if (img.trackingState == TrackingState.Tracking)
         {
-            Debug.Log("Updating image " + img.referenceImage.name + " at " + img.transform.position);
 
             spawned.transform.position = img.transform.position;
             spawned.transform.rotation = img.transform.rotation;
@@ -93,7 +92,6 @@ public class Multiple_Tracking_Image : MonoBehaviour
         else
         {
             spawned.SetActive(false);
-
         }
     }
 }

@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NailCollision : MonoBehaviour
+public class BattleManager : MonoBehaviour
 {
-    public GameObject nailManager;
+    [SerializeField]
+    public GameObject[] monster_Object;
+    
+
 
     void Start()
     {
@@ -16,4 +19,8 @@ public class NailCollision : MonoBehaviour
         
     }
 
+    public void OnClickTestButton()
+    {
+
+    }
 }

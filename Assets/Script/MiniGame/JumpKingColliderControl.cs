@@ -5,22 +5,23 @@ using UnityEngine;
 public class JumpKingColliderControl : MonoBehaviour
 {
     Rigidbody rb;
-
+    GameObject player;
     void Start()
     {
-        rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
+        player = GameObject.FindWithTag("Player");
+        rb = player.GetComponent<Rigidbody>();
     }
 
     void Update()
     {
       
-        if(rb.velocity.y > 0)
+        if(rb.velocity.y <= 0 && player.transform.localPosition.y > this.transform.localPosition.y  + 90)
         {
-            this.GetComponent<BoxCollider>().enabled = false;
+            this.GetComponent<BoxCollider>().enabled = true;
         }
         else
         {
-            this.GetComponent<BoxCollider>().enabled = true;
+            this.GetComponent<BoxCollider>().enabled = false;
 
         }
     }

@@ -7,19 +7,22 @@ using UnityEngine.UI;
 public class JumpKingManager : MonoBehaviour
 {
     public Slider powerGauge_slider;
-    //public GameObject player_object;
+    
     Rigidbody player_rigid;
 
     float jumpPower;
-
+    bool isGround;
     void Start()
     {
+        Application.targetFrameRate = 60;
+
         jumpPower = 0;
+        isGround = true;
 
         powerGauge_slider.maxValue = 200;
         powerGauge_slider.value = jumpPower;
 
-        player_rigid = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
+        player_rigid = this.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -36,18 +39,53 @@ public class JumpKingManager : MonoBehaviour
 
             if(touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
             {
-                powerGauge_slider.value++;
+                if(isGround)
+                {
+                    powerGauge_slider.value += 2;
+
+                }
             }
 
 
             if (touch.phase == TouchPhase.Ended)
             {
-                player_rigid.AddForce(Vector3.up * powerGauge_slider.value * 5);
-                powerGauge_slider.value = 0;
+                if (isGround)
+                {
+                    player_rigid.AddForce(Vector3.up * powerGauge_slider.value * 5);
+                    powerGauge_slider.value = 0;
+                }
 
 
             }
 
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Goal")
+        {
+            PlayerPrefs.SetInt("MiniGame2Clear", 1);
+            SceneManager.LoadScene("MainScene");
+        }
+
+        if (collision.gameObject.tag == "Failed")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
+
+        if (collision.transform.tag == "Ground")
+        {
+            isGround = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag == "Ground")
+        {
+            isGround = false;
         }
     }
 }

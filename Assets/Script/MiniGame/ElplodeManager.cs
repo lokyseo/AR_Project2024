@@ -25,13 +25,12 @@ public class ElplodeManager : MonoBehaviour
     {
         current_num = 1;
         StartCoroutine(CountNumber());
+        
 
     }
 
     void Update()
     {
-        
-
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -63,6 +62,7 @@ public class ElplodeManager : MonoBehaviour
                     if(hit.transform.tag == "Card")
                     {
                         Destroy(hit.transform.gameObject);
+                        PlayerPrefs.SetInt("MiniGame1Clear", 1);
                         SceneManager.LoadScene("MainScene");
                     }
                 }
