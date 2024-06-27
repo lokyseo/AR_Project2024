@@ -33,7 +33,7 @@ public class Tracked_SceneMove1 : MonoBehaviour
             timeCount = 1.0f;
             for(int i = 1; i < 5; i++)
             {
-                if (this.gameObject.name.Contains("MiniGame" + i))
+                if (this.gameObject.name.Contains("test" + i))
                 {
                     SceneManager.LoadScene("Test" + i + "_Tracked");
 
