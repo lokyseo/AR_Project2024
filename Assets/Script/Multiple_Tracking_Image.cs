@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.XR.CoreUtils;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -17,6 +17,7 @@ public struct PlaceablePrefabs
 public class Multiple_Tracking_Image : MonoBehaviour
 {
     private ARTrackedImageManager imgManager;
+    public ARSession session;
 
     public PlaceablePrefabs[] prefabs;
 
@@ -88,6 +89,15 @@ public class Multiple_Tracking_Image : MonoBehaviour
             spawned.transform.position = img.transform.position;
             spawned.transform.rotation = img.transform.rotation;
             spawned.SetActive(true);
+            session.Reset();
+
+            for(int i = 1; i < 5; i++)
+            {
+                if (name == "test" + i)
+                {
+                    SceneManager.LoadScene("Test" + i + "_Tracked");
+                }
+            }
         }
         else
         {

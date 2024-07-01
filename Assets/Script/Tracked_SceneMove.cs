@@ -24,10 +24,10 @@ public class Tracked_SceneMove : MonoBehaviour
         {
             timeCount = 1.0f;
             
-            this.gameObject.SetActive(false);
+           // this.gameObject.SetActive(false);
 
-            SceneManager.LoadScene("Test1_Tracked");
-            Camera.main.Reset();
+           // SceneManager.LoadScene("Test1_Tracked");
+           // Camera.main.Reset();
 
         }
 

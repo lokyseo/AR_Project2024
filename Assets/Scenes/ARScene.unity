@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568898c3ba1dadb4f971773e4968a80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  session: {fileID: 1088634398}
   prefabs:
   - name: test1
     prefab: {fileID: 6738559802617929977, guid: 83bbd07e0d7c1e6408775436498b092c, type: 3}
