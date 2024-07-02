@@ -12,8 +12,6 @@ public class LineControll : MonoBehaviour
     void Start()
     {
         
-        //lineRenderer.material.color = GetComponentInParent<Image>().color;
-        //lineRenderer.positionCount = linePosition.Length;
     }
 
     void Update()
