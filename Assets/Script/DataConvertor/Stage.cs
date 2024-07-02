@@ -8,4 +8,5 @@ public class Stage
     public int id;
     public string name;
     public string sceneName;
+    public Zone zone;
 }

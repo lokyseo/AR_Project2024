@@ -12,6 +12,15 @@ public class GameData : ScriptableObject
     public List<Stage> stages;
 }
 
+public enum Zone
+{
+    Entrance,
+    Future,
+    Robot,
+    Adventure,
+    Dream
+}
+
 
 #if UNITY_EDITOR
 public class ArrayElementTitleAttribute : PropertyAttribute
