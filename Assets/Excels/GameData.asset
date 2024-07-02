@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d7c76935f98c04ea074abbabc14728, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  stages:
+  - id: 1
+    name: "\uBC88\uD638\uD48D\uC120 \uD130\uD2B8\uB9AC\uAE30"
+    sceneName: 
+  - id: 2
+    name: "\uC62C\uBC14\uB978 \uC704\uCE58\uC5D0 \uBB3C\uAC74\uC62C\uB9AC\uAE30"
+    sceneName: 
+  - id: 3
+    name: "\uC54C\uB9DE\uC740 \uD0C0\uC774\uBC0D\uC5D0 \uBABB\uBC15\uAE30"
+    sceneName: 
+  - id: 4
+    name: "\uB5A8\uC5B4\uC9C0\uB294 \uC2A4\uD2F1\uC7A1\uAE30"
+    sceneName: 
+  - id: 5
+    name: "\uBE60\uB974\uAC8C \uD130\uCE58 \uD558\uC5EC \uBD80\uD654\uC2DC\uD0A4\uAE30"
+    sceneName: 
+  - id: 6
+    name: "\uC88C\uC6B0 \uBC84\uD2BC\uC744 \uC5F0\uD0C0\uD558\uAE30"
+    sceneName: 
+  - id: 7
+    name: "\uBE14\uB7ED\uB9DE\uCD94\uAE30"
+    sceneName: 
+  - id: 8
+    name: "\uC0C9\uC0C1\uB9DE\uCDB0 \uC120\uC5F0\uACB0\uD558\uAE30"
+    sceneName: 
+  - id: 9
+    name: "\uC62C\uBC14\uB978 \uD1B1\uB2C8\uBC14\uD034 \uB07C\uC6B0\uAE30"
+    sceneName: 
+  - id: 10
+    name: "\uB3CC\uB824\uC11C \uC5D4\uC9C4 \uAC00\uB3D9\uC2DC\uD0A4\uAE30"
+    sceneName: 
+  - id: 11
+    name: "\uCE74\uB4DC \uB4A4\uC9D1\uAE30"
+    sceneName: 
+  - id: 12
+    name: "\uD034\uC988 \uB9DE\uCD94\uAE30"
+    sceneName: 
+  - id: 13
+    name: "\uD2C0\uB9B0\uADF8\uB9BC \uB9DE\uCD94\uAE30"
+    sceneName: 
+  - id: 14
+    name: "\uAC80\uC740 \uACF5\uAC04\uC5D0\uC11C \uB77C\uC774\uD2B8\uB85C \uBB3C\uAC74\uCC3E\uAE30"
+    sceneName: 
+  - id: 15
+    name: "\uC794\uD574 \uCE58\uC6B0\uAE30"
+    sceneName: 
+  - id: 16
+    name: "\uC774\uBBF8\uC9C0\uB300\uB85C \uD0D1\uC313\uAE30"
+    sceneName: 
+  - id: 17
+    name: "\uC54C\uAE4C\uAE30"
+    sceneName: 
+  - id: 18
+    name: "\uC57C\uBC14\uC704"
+    sceneName: 
+  - id: 19
+    name: "\uC6B4\uC11D \uBD80\uC218\uAE30"
+    sceneName: 
+  - id: 20
+    name: "\uC88C\uC6B0\uC774\uB3D9\uC73C\uB85C \uD53C\uD558\uAE30"
+    sceneName: 
+  - id: 21
+    name: "\uC62C\uBC14\uB978 \uBAA8\uC591\uC758 \uC704\uCE58\uC5D0 \uBE14\uB7ED
+      \uC815\uB9AC\uD558\uAE30"
+    sceneName: 
+  - id: 22
+    name: "\uC88C\uC6B0 \uC815\uB9AC\uD558\uAE30"
+    sceneName: 
+  - id: 23
+    name: "\uB625\uD53C\uD558\uAE30"
+    sceneName: 
+  - id: 24
+    name: "\uD1B5\uB098\uBB34 \uB3CC\uB9AC\uAE30"
+    sceneName: 
+  - id: 25
+    name: "\uC62C\uBC14\uB978 \uD3EC\uC988 \uCDE8\uD558\uAE30"
+    sceneName: 
+  - id: 26
+    name: "\uC0C9 \uB9DE\uCD94\uB294 \uAE30\uC5B5\uB825\uAC8C\uC784"
+    sceneName: 
+  - id: 27
+    name: "\uAF2C\uC778 \uBBF8\uB044\uB7FC\uD2C0 \uD0C0\uAE30"
+    sceneName: 
+  - id: 28
+    name: "\uD55C\uBD93\uADF8\uB9AC\uAE30"
+    sceneName: 
+  - id: 29
+    name: "\uBE44\uBCBC\uC11C \uAE30\uB984\uCE60\uD558\uAE30"
+    sceneName: 
+  - id: 30
+    name: "\uD0C0\uC774\uBC0D\uC5D0 \uB9DE\uAC8C \uD0D1\uC313\uAE30"
+    sceneName: 
+  - id: 31
+    name: "\uC800\uC6B8\uCD94 \uD3C9\uD589 \uB9DE\uCD94\uAE30"
+    sceneName: 
+  - id: 32
+    name: "\uC2E0\uD638\uC5D0 \uB9DE\uCDB0\uC11C \uC6C0\uC9C1\uC774\uAE30"
+    sceneName: 
+  - id: 33
+    name: "\uACE0\uC7A5\uB09C \uBD80\uD488 \uAC08\uC544\uB07C\uAE30"
+    sceneName: 
+  - id: 34
+    name: "\uC3DF\uC544\uC9C4 \uBD80\uD488 \uBD84\uB958\uD558\uAE30"
+    sceneName: 
+  - id: 35
+    name: "\uD0C0\uC774\uBC0D\uC5D0 \uB9DE\uAC8C \uBC84\uD2BC \uD074\uB9AD\uD558\uAE30"
+    sceneName: 

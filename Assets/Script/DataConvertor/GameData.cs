@@ -4,38 +4,12 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.U2D;
 
 public class GameData : ScriptableObject
 {
-#if UNITY_EDITOR
-    [ArrayElementTitle("characterName")]
-#endif
-    public List<Character> Characters;
-
-#if UNITY_EDITOR
     [ArrayElementTitle("name")]
-#endif
-    public List<Weapon> weapons;
-
-#if UNITY_EDITOR
-    [ArrayElementTitle("name")]
-#endif
-    public List<Monster> monsters;
-
     public List<Stage> stages;
-
-    public List<Sprite> weaponImages;
-
-    public List<Item> items;
-
-    public Monster GetMonsterFromID(int id)
-    {
-        return monsters[id].Clone();
-    }
-
 }
 
 

@@ -13,7 +13,7 @@ public class ExcelToScriptableObject
     [MenuItem("GameData/Create")]
     public static GameData CreateGameDB()
     {
-        var assetPath = "Assets/Prefabs/GameData.asset";
+        var assetPath = "Assets/Excels/GameData.asset";
         var excelPath = "Assets/Excels/GameData.xlsx";
 
         var gameData = AssetDatabase.LoadAssetAtPath<GameData>(assetPath);  // Path 를 통해서 만들어져있던 Asset을 읽어온다.

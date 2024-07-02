@@ -7,8 +7,5 @@ public class Stage
 {
     public int id;
     public string name;
-    public int themeId;
-    public List<Elemental> StrongElementals;
-    public List<Elemental> WeekElementals;
-    public string stageMonster;
+    public string sceneName;
 }
