@@ -33,15 +33,7 @@ public class MainManager : MonoBehaviour
 
     public void OnClickCheckedClearButton()
     {
-        if(panel_Object.activeSelf)
-        {
-            panel_Object.SetActive(false);
-        }
-        else
-        {
-            panel_Object.SetActive(true);
-
-        }
+        panel_Object.SetActive(!panel_Object.activeSelf);
     }
 
     public void OnClickCameraButton()
