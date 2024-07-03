@@ -8,7 +8,10 @@ using UnityEngine.U2D;
 
 public class GameData : ScriptableObject
 {
+
+#if UNITY_EDITOR
     [ArrayElementTitle("name")]
+#endif    
     public List<Stage> stages;
 }
 
