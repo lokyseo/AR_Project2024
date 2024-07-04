@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RunLeftRightCollision : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class RunLeftRightCollision : MonoBehaviour
 
     void Start()
     {
-        moveSpeed = 200.0f;
+        moveSpeed = 500.0f;
     }
 
     void Update()
@@ -19,12 +20,13 @@ public class RunLeftRightCollision : MonoBehaviour
     {
         if(collision.transform.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         }
 
         if (collision.transform.tag == "Failed")
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 

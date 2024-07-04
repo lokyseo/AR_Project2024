@@ -10,11 +10,12 @@ public class RunLeftRight : MonoBehaviour
     public GameObject total_Obstacle;
 
     public GameObject obstacle;
-
+    float spawnTime;
 
     void Start()
     {
         player_Object = GameObject.FindWithTag("Player");
+        spawnTime = 1.0f;
     }
 
     void Update()
@@ -34,6 +35,32 @@ public class RunLeftRight : MonoBehaviour
             }
         }
 
+        SpawnObstacle();
+    }
+
+    void SpawnObstacle()
+    {
+        spawnTime -= Time.deltaTime;
+        if (spawnTime < 0.0f)
+        {
+            spawnTime = 2.0f;
+            GameObject spawnObject =Instantiate(obstacle);
+            spawnObject.transform.SetParent(total_Obstacle.transform);
+            int randNum = Random.Range(0, 3);
+            switch (randNum)
+            {
+                case 0: randNum = -300;
+                    break;
+                case 1:
+                    randNum = 0;
+                    break;
+                case 2:
+                    randNum = 300;
+                    break;
+            }
+
+            spawnObject.transform.localPosition = total_Obstacle.transform.position + new Vector3(randNum, 0, 0);
+        }
     }
 
     private void DetectSwipe()
