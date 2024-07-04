@@ -13,7 +13,7 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
     GameObject clicked_Object;
     LineRenderer lineRenderer;
     Vector3[] linePosition = new Vector3[2];
-    int connectCount;
+    public int connectCount;
     bool isSameColor;
 
     private void Awake()
@@ -26,6 +26,8 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
     {
         clicked_Object = eventData.pointerCurrentRaycast.gameObject;
         lineRenderer = clicked_Object.GetComponentInChildren<LineRenderer>();
+
+        linePosition[0] = clicked_Object.transform.position;
         linePosition[1] = linePosition[0];
         lineRenderer.SetPositions(linePosition);
 
@@ -43,7 +45,6 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
 
         lineRenderer.positionCount = linePosition.Length;
 
-        linePosition[0] = clicked_Object.transform.position;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -57,6 +58,9 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
     {
         if (eventData.pointerCurrentRaycast.gameObject == null)
         {
+            linePosition[0] = clicked_Object.transform.position;
+            linePosition[1] = linePosition[0];
+            lineRenderer.SetPositions(linePosition);
             lineRenderer.enabled = false;
             return;
         }
@@ -65,19 +69,26 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
         {
             linePosition[1] = eventData.pointerCurrentRaycast.gameObject.transform.position;
             lineRenderer.SetPositions(linePosition);
+            
+            
 
-            if(!isSameColor)
+            if(!isSameColor && !eventData.pointerCurrentRaycast.gameObject.GetComponentInChildren<LineRenderer>().enabled)
             {
                 connectCount++;
-                if(connectCount == 4)
+                eventData.pointerCurrentRaycast.gameObject.GetComponentInChildren<LineRenderer>().enabled = true;
+                if (connectCount == 4)
                 {
                     SceneManager.LoadScene("MainScene");
                 }
             }
+            
             //lineRenderer.test = true;
         }
         else
         {
+            linePosition[0] = clicked_Object.transform.position;
+            linePosition[1] = linePosition[0];
+            lineRenderer.SetPositions(linePosition);
             lineRenderer.enabled = false;
         }
 
