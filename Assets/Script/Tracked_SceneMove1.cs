@@ -16,12 +16,6 @@ public class Tracked_SceneMove1 : MonoBehaviour
     void Start()
     {
         timeCount = 1.0f;
-        if (this.gameObject.activeSelf)
-        {
-            //ARManager.isTrackingSuccess = true;
-            //Destroy(this.gameObject);
-
-        }
 
     }
 
