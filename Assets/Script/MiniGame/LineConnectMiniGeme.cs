@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -14,12 +15,18 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
     LineRenderer lineRenderer;
     Vector3[] linePosition = new Vector3[2];
     public int connectCount;
+
+    public Image[] left_Image;
+    public Image[] right_Image;
+
     bool isSameColor;
 
     private void Awake()
     {
         isSameColor = false;
         connectCount = 0;
+
+        ResetColor();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -94,6 +101,78 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
 
     }
 
+    private void ResetColor()
+    {
+        int[] color_Array = new int[4];
+        int randNum;
 
+        for (int j = 0; j < 2; j++)
+        {
+            for (int i = 0; i < color_Array.Length; i++)
+            {
+                color_Array[i] = 4;
+
+            }
+            for (int i = 0; i < 4;)
+            {
+                randNum = Random.Range(0, 4);
+
+                if (color_Array.Contains(randNum))
+                {
+                    continue;
+                }
+                else
+                {
+                    color_Array[i] = randNum;
+                    switch (randNum)
+                    {
+                        case 0:
+                            if (j == 0)
+                            {
+                                left_Image[i].color = Color.red;
+                            }
+                            else
+                            {
+                                right_Image[i].color = Color.red;
+                            }
+                            break;
+                        case 1:
+                            if (j == 0)
+                            {
+                                left_Image[i].color = Color.blue;
+                            }
+                            else
+                            {
+                                right_Image[i].color = Color.blue;
+                            }
+                            break;
+                        case 2:
+                            if (j == 0)
+                            {
+                                left_Image[i].color = Color.yellow;
+                            }
+                            else
+                            {
+                                right_Image[i].color = Color.yellow;
+                            }
+                            break;
+                        case 3:
+                            if (j == 0)
+                            {
+                                left_Image[i].color = Color.green;
+                            }
+                            else
+                            {
+                                right_Image[i].color = Color.green;
+                            }
+                            break;
+                    }
+
+                    i++;
+                }
+
+            }
+        }
+    }
 }
 

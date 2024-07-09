@@ -16,17 +16,25 @@ public class RunLeftRightCollision : MonoBehaviour
     {
         transform.localPosition += Vector3.down * moveSpeed * Time.deltaTime;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         }
 
         if (collision.transform.tag == "Failed")
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+
         }
     }
 

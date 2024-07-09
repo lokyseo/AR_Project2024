@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RunLeftRight : MonoBehaviour
@@ -72,10 +73,23 @@ public class RunLeftRight : MonoBehaviour
             {
                 if (direction.x > 0)
                 {
+                    //Vector3 targetPosition = new Vector3(360, player_Object.transform.position.y, player_Object.transform.position.z);
+                    //player_Object.transform.position = 
+                    //    Vector3.Lerp(player_Object.transform.position, targetPosition, 10.0f * Time.deltaTime);
+                    //
+                    //if (Vector3.Distance(player_Object.transform.position, targetPosition) < 0.01f)
+                    //{
+                    //    player_Object.transform.position = targetPosition;
+                    //}
+
+                    if (player_Object.transform.localPosition.x >= 360)
+                        return;
                     player_Object.transform.localPosition += new Vector3(360, 0, 0);
                 }
                 else
                 {
+                    if (player_Object.transform.localPosition.x <= -360)
+                        return;
                     player_Object.transform.localPosition += new Vector3(-360, 0, 0);
                 }
             }
