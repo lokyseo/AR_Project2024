@@ -18,7 +18,7 @@ public class WoodRollMiniGame : MonoBehaviour
         rotTime = Random.Range(0.5f, 3f);
         player_rigid = player_Object.GetComponent<Rigidbody2D>();
 
-        moveSpeed = 2.0f;
+        moveSpeed = 3.5f;
     }
 
     void Update()
@@ -29,7 +29,7 @@ public class WoodRollMiniGame : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                player_Object.transform.parent = basic_Transform.transform;
+               // player_Object.transform.parent = basic_Transform.transform;
 
             }
 
@@ -37,20 +37,20 @@ public class WoodRollMiniGame : MonoBehaviour
             {
                 if (touch.position.x < Screen.width / 2)
                 {
-                    player_rigid.velocity = new Vector2(-moveSpeed , player_rigid.velocity.y);
-                    //player_Object.transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+                    //player_rigid.velocity = new Vector2(-moveSpeed , player_rigid.velocity.y);
+                    player_Object.transform.Translate(Vector3.left * moveSpeed * Time.deltaTime, Space.World);
                 }
                 else if (touch.position.x >= Screen.width / 2)
                 {
-                    player_rigid.velocity = new Vector2(moveSpeed, player_rigid.velocity.y);
-                    //player_Object.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                    //player_rigid.velocity = new Vector2(moveSpeed, player_rigid.velocity.y);
+                    player_Object.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.World);
 
                 }
             }
 
             if (touch.phase == TouchPhase.Ended)
             {
-                player_Object.transform.parent = wood_Object.transform;
+                //player_Object.transform.parent = wood_Object.transform;
 
             }
         }
@@ -60,17 +60,17 @@ public class WoodRollMiniGame : MonoBehaviour
         {
             rotTime = Random.Range(0.5f, 3f);
             randnum = Random.Range(0, 2);
-
+            
         }
 
         if (randnum == 0)
         {
-            wood_Object.transform.Rotate(Vector3.forward, 20.0f * Time.deltaTime);
+            wood_Object.transform.Rotate(Vector3.forward, 25.0f * Time.deltaTime);
 
         }
         else
         {
-            wood_Object.transform.Rotate(Vector3.forward, -20.0f * Time.deltaTime);
+            wood_Object.transform.Rotate(Vector3.forward, -25.0f * Time.deltaTime);
 
         }
     }
