@@ -17,11 +17,11 @@ public class JumpKingColliderControl : MonoBehaviour
       
         if(rb.velocity.y <= 0 && player.transform.localPosition.y > this.transform.localPosition.y  + 90)
         {
-            this.GetComponent<BoxCollider>().enabled = true;
+            this.GetComponent<BoxCollider2D>().enabled = true;
         }
         else
         {
-            this.GetComponent<BoxCollider>().enabled = false;
+            this.GetComponent<BoxCollider2D>().enabled = false;
 
         }
     }
