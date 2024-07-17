@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class EggCrushManager : MonoBehaviour
 {
     public Text textCount;
+    public Image filled_Image;
     float touchCount;
     void Start()
     {
@@ -25,9 +26,7 @@ public class EggCrushManager : MonoBehaviour
 
                 if (touch.phase == TouchPhase.Began)
                 {
-                    touchCount--;
-
-                    if(touchCount <= 0)
+                    if (touchCount <= 0)
                     {
                         PlayerPrefs.SetInt("MiniGame4Clear", 1);
                         SceneManager.LoadScene("MainScene");
@@ -36,6 +35,8 @@ public class EggCrushManager : MonoBehaviour
                     }
                     else
                     {
+                        touchCount--;
+                        filled_Image.fillAmount += 0.01f;
                         textCount.text = touchCount.ToString();
 
                     }

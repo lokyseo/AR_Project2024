@@ -22,7 +22,7 @@ public class JumpKingManager : MonoBehaviour
         powerGauge_slider.maxValue = 200;
         powerGauge_slider.value = jumpPower;
 
-        player_rigid = this.GetComponent<Rigidbody>();
+        player_rigid = this.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -61,7 +61,7 @@ public class JumpKingManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Goal")
         {
@@ -81,11 +81,12 @@ public class JumpKingManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.transform.tag == "Ground")
         {
             isGround = false;
         }
     }
+
 }

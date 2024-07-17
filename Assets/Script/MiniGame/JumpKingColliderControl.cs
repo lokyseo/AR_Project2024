@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class JumpKingColliderControl : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
     GameObject player;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        rb = player.GetComponent<Rigidbody>();
+        rb = player.GetComponent<Rigidbody2D>();
     }
 
     void Update()

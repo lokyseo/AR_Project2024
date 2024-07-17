@@ -69,6 +69,7 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
             linePosition[1] = linePosition[0];
             lineRenderer.SetPositions(linePosition);
             lineRenderer.enabled = false;
+            Debug.Log("Null");
             return;
         }
         else if(eventData.pointerCurrentRaycast.gameObject.tag == "LineConnect" &&
@@ -89,7 +90,6 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
                 }
             }
             
-            //lineRenderer.test = true;
         }
         else
         {
@@ -97,6 +97,7 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
             linePosition[1] = linePosition[0];
             lineRenderer.SetPositions(linePosition);
             lineRenderer.enabled = false;
+            Debug.Log("Else");
         }
 
     }

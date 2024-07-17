@@ -64,7 +64,7 @@ public class NailManager : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Nail"))
         {
-            collision.transform.localPosition -= new Vector3(0, 100, 0);
+            collision.transform.localPosition -= new Vector3(0, 0.7f, 0);
             isCollision = true;
             collisionCount++;
             if(collisionCount == 4)
