@@ -8,7 +8,7 @@ public class JumpKingManager : MonoBehaviour
 {
     public Slider powerGauge_slider;
     
-    Rigidbody player_rigid;
+    Rigidbody2D player_rigid;
 
     float jumpPower;
     bool isGround;
