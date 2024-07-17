@@ -34,6 +34,7 @@ public class ArrayElementTitleAttribute : PropertyAttribute
         Varname = ElementTitleVar;
     }
 }
+
 [CustomPropertyDrawer(typeof(ArrayElementTitleAttribute))]
 public class ArrayElementTitleDrawer : PropertyDrawer
 {
@@ -49,7 +50,7 @@ public class ArrayElementTitleDrawer : PropertyDrawer
     {
         string FullPathName = property.propertyPath + "." + Attribute.Varname;
         TitleNameProp = property.serializedObject.FindProperty(FullPathName);
-        string newLabel = GetArrayIndex(property) + ". " +GetTitle();
+        string newLabel = GetArrayIndex(property) + ". " + GetTitle();
         if (string.IsNullOrEmpty(newLabel))
             newLabel = label.text;
 

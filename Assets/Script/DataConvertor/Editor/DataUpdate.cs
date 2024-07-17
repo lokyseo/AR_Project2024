@@ -15,6 +15,11 @@ public class DataUpdate : AssetPostprocessor
                 Debug.Log("Reimported Asset: " + str);
                 ExcelToScriptableObject.CreateGameDB();
             }
+
+            if (Path.GetFileNameWithoutExtension(str) == "Dialogues")
+            {
+                ExcelToScriptableObject.CreateDialogues();
+            }
         }
         foreach (string str in deletedAssets)
         {

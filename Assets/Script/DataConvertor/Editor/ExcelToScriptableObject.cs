@@ -34,6 +34,30 @@ public class ExcelToScriptableObject
         return gameData;
     }
 
+    [MenuItem("GameData/dialogue")]
+    public static DialogueScript CreateDialogues()
+    {
+        var assetPath = "Assets/Excels/Dialogues.asset";
+        var excelPath = "Assets/Excels/Dialogues.xlsx";
+
+        var dialogueData = AssetDatabase.LoadAssetAtPath<DialogueScript>(assetPath);
+
+        if (dialogueData == null)
+        {
+            dialogueData = ScriptableObject.CreateInstance<DialogueScript>();
+            AssetDatabase.CreateAsset(dialogueData, assetPath);
+        }
+
+        DataSet excelData = GetExcelDataSet(excelPath);
+        FillData<DialogueScript>(dialogueData, excelData);
+
+        EditorUtility.SetDirty(dialogueData);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+
+        return dialogueData;
+    }
+
     /// <summary>
     /// ExcelReader를 이용해 ExcelPath를 통해 데이터를 DataSet으로 반환한다.
     /// </summary>
