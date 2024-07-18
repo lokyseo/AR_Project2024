@@ -13,6 +13,8 @@ public class GameData : ScriptableObject
     [ArrayElementTitle("name")]
 #endif    
     public List<Stage> stages;
+
+    public List<Item> items;
 }
 
 public enum Zone

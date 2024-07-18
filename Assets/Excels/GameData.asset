@@ -16,7 +16,7 @@ MonoBehaviour:
   - id: 0
     name: "\uBC88\uD638\uD48D\uC120 \uD130\uD2B8\uB9AC\uAE30"
     sceneName: 
-    zone: 0
+    zone: 2
   - id: 1
     name: "\uC62C\uBC14\uB978 \uC704\uCE58\uC5D0 \uBB3C\uAC74\uC62C\uB9AC\uAE30"
     sceneName: 
@@ -24,7 +24,7 @@ MonoBehaviour:
   - id: 2
     name: "\uC54C\uB9DE\uC740 \uD0C0\uC774\uBC0D\uC5D0 \uBABB\uBC15\uAE30"
     sceneName: 
-    zone: 0
+    zone: 3
   - id: 3
     name: "\uB5A8\uC5B4\uC9C0\uB294 \uC2A4\uD2F1\uC7A1\uAE30"
     sceneName: 
@@ -154,3 +154,40 @@ MonoBehaviour:
     name: "\uD0C0\uC774\uBC0D\uC5D0 \uB9DE\uAC8C \uBC84\uD2BC \uD074\uB9AD\uD558\uAE30"
     sceneName: 
     zone: 0
+  items:
+  - id: 0
+    name: "\uB85C\uBD07\uD1A0\uD53C\uC544A"
+    description: "\uC544\uC774\uD15C 01\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/test1.jpg
+  - id: 1
+    name: "\uB85C\uBD07\uD1A0\uD53C\uC544B"
+    description: "\uC544\uC774\uD15C 02\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 2
+    name: "\uD4E8\uCCD0\uC874A"
+    description: "\uC544\uC774\uD15C 03\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 3
+    name: "\uD45C\uCCD0\uC874B"
+    description: "\uC544\uC774\uD15C 04\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 4
+    name: "\uC5B4\uB4DC\uBC34\uCC98A"
+    description: "\uC544\uC774\uD15C 05\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 5
+    name: "\uC5B4\uB4DC\uBC34\uCC98B"
+    description: "\uC544\uC774\uD15C 06\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 6
+    name: "\uB4DC\uB9BC\uC874A"
+    description: "\uC544\uC774\uD15C 07\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 7
+    name: "\uB4DC\uB9BC\uC874B"
+    description: "\uC544\uC774\uD15C 08\uBC88\uC774\uB2E4"
+    imageAddress: 
+  - id: 8
+    name: "Boss\uC544\uC774\uD15C"
+    description: "\uC544\uC774\uD15C 09\uBC88\uC774\uB2E4"
+    imageAddress: 

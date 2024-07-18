@@ -23,8 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame/Test4_Tracked.unity
     guid: d30fdc07b53ffa24285d80cb90ffcec8
+  - enabled: 1
+    path: Assets/Scenes/StoryScene.unity
+    guid: 72bfff06479d5014daf23f81d5f9bff1
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8a9add529fe3a8b449d253cbe21f21f6, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 4bb97cf614bf67d469c311dd8200209c, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 0a814be97d16afa45b1af2fd7ad15448, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 14fc3737c034c074e80b92806a0afc79, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0166d4a14692ea94a83c582fa57acb22, type: 2}

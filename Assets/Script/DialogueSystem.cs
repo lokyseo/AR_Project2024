@@ -33,11 +33,11 @@ public class DialogueSystem : MonoBehaviour
             if (fieldInfo != null)
             {
                 Script = fieldInfo.GetValue(dialogues) as List<Script>;
-                Debug.Log("introScript value: " + Script);
+                Debug.Log("Loaded : " + scriptName);
             }
             else
             {
-                Debug.LogError("Field 'introScript' not found.");
+                Debug.LogError("Field "+ scriptName + "not found.");
             }
         }
     }
