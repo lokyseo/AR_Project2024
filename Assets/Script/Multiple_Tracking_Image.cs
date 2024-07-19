@@ -36,7 +36,6 @@ public class Multiple_Tracking_Image : MonoBehaviour
             instantiated.name = prefab.name;
             spawnedPrefabs.Add(instantiated.name, instantiated);
             instantiated.SetActive(false);
-
         }
     }
 

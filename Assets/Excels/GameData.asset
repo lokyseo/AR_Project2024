@@ -162,32 +162,32 @@ MonoBehaviour:
   - id: 1
     name: "\uB85C\uBD07\uD1A0\uD53C\uC544B"
     description: "\uC544\uC774\uD15C 02\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test2.jpg
   - id: 2
     name: "\uD4E8\uCCD0\uC874A"
     description: "\uC544\uC774\uD15C 03\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test3.jpg
   - id: 3
     name: "\uD45C\uCCD0\uC874B"
     description: "\uC544\uC774\uD15C 04\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test4.jpg
   - id: 4
     name: "\uC5B4\uB4DC\uBC34\uCC98A"
     description: "\uC544\uC774\uD15C 05\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test5.jpg
   - id: 5
     name: "\uC5B4\uB4DC\uBC34\uCC98B"
     description: "\uC544\uC774\uD15C 06\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test6.jpg
   - id: 6
     name: "\uB4DC\uB9BC\uC874A"
     description: "\uC544\uC774\uD15C 07\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test7.jpg
   - id: 7
     name: "\uB4DC\uB9BC\uC874B"
     description: "\uC544\uC774\uD15C 08\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test8.jpg
   - id: 8
     name: "Boss\uC544\uC774\uD15C"
     description: "\uC544\uC774\uD15C 09\uBC88\uC774\uB2E4"
-    imageAddress: 
+    imageAddress: Assets/Image/test9.jpg
