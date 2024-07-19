@@ -34,8 +34,6 @@ public class Tracked_SceneMove1 : MonoBehaviour
                     SceneManager.LoadScene("Test" + i + "_Tracked");
                 }
             }
-            
-
         }
     }
 }

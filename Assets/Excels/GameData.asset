@@ -14,28 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stages:
   - id: 0
-    name: "\uBC88\uD638\uD48D\uC120 \uD130\uD2B8\uB9AC\uAE30"
-    sceneName: 
+    name: "\uB85C\uBD07 \uC81C\uC791\uD558\uAE30"
+    sceneName: Mini_0_CreateRobot
     zone: 2
   - id: 1
     name: "\uC62C\uBC14\uB978 \uC704\uCE58\uC5D0 \uBB3C\uAC74\uC62C\uB9AC\uAE30"
-    sceneName: 
+    sceneName: Mini_1_Planet
     zone: 1
   - id: 2
-    name: "\uC54C\uB9DE\uC740 \uD0C0\uC774\uBC0D\uC5D0 \uBABB\uBC15\uAE30"
-    sceneName: 
+    name: "\uB85C\uBD07 \uC218\uB9AC\uD558\uAE30"
+    sceneName: Mini_2_RepairRobot
     zone: 3
   - id: 3
-    name: "\uB5A8\uC5B4\uC9C0\uB294 \uC2A4\uD2F1\uC7A1\uAE30"
-    sceneName: 
+    name: "\uD0C0\uC774\uBC0D\uC5D0 \uB9DE\uAC8C \uBB3C\uAC74\uC7A1\uAE30"
+    sceneName: Mini_3_GrabTool
     zone: 0
   - id: 4
-    name: "\uBE60\uB974\uAC8C \uD130\uCE58 \uD558\uC5EC \uBD80\uD654\uC2DC\uD0A4\uAE30"
-    sceneName: 
+    name: "\uD130\uCE58\uD558\uC5EC \uC5D0\uB108\uC9C0 \uCDA9\uC804\uD558\uAE30"
+    sceneName: Mini_4_ChargeEnergy
     zone: 0
   - id: 5
     name: "\uC88C\uC6B0 \uBC84\uD2BC\uC744 \uC5F0\uD0C0\uD558\uAE30"
-    sceneName: 
+    sceneName: Mini_5_YounTa
     zone: 0
   - id: 6
     name: "\uBE14\uB7ED\uB9DE\uCD94\uAE30"
@@ -43,7 +43,7 @@ MonoBehaviour:
     zone: 0
   - id: 7
     name: "\uC0C9\uC0C1\uB9DE\uCDB0 \uC120\uC5F0\uACB0\uD558\uAE30"
-    sceneName: 
+    sceneName: Mini_7_ConnectLine
     zone: 0
   - id: 8
     name: "\uC62C\uBC14\uB978 \uD1B1\uB2C8\uBC14\uD034 \uB07C\uC6B0\uAE30"
@@ -55,7 +55,7 @@ MonoBehaviour:
     zone: 0
   - id: 10
     name: "\uCE74\uB4DC \uB4A4\uC9D1\uAE30"
-    sceneName: 
+    sceneName: Mini_10_CardFlip
     zone: 0
   - id: 11
     name: "\uD034\uC988 \uB9DE\uCD94\uAE30"
@@ -66,7 +66,7 @@ MonoBehaviour:
     sceneName: 
     zone: 0
   - id: 13
-    name: "\uAC80\uC740 \uACF5\uAC04\uC5D0\uC11C \uB77C\uC774\uD2B8\uB85C \uBB3C\uAC74\uCC3E\uAE30"
+    name: 
     sceneName: 
     zone: 0
   - id: 14
@@ -78,7 +78,7 @@ MonoBehaviour:
     sceneName: 
     zone: 0
   - id: 16
-    name: "\uC54C\uAE4C\uAE30"
+    name: 
     sceneName: 
     zone: 0
   - id: 17
@@ -91,7 +91,7 @@ MonoBehaviour:
     zone: 0
   - id: 19
     name: "\uC88C\uC6B0\uC774\uB3D9\uC73C\uB85C \uD53C\uD558\uAE30"
-    sceneName: 
+    sceneName: Boss_SpaceShip
     zone: 0
   - id: 20
     name: "\uC62C\uBC14\uB978 \uBAA8\uC591\uC758 \uC704\uCE58\uC5D0 \uBE14\uB7ED
@@ -107,8 +107,8 @@ MonoBehaviour:
     sceneName: 
     zone: 0
   - id: 23
-    name: "\uD1B5\uB098\uBB34 \uB3CC\uB9AC\uAE30"
-    sceneName: 
+    name: "\uB3CC\uC544\uAC00\uB294 \uC6B0\uC8FC\uC120\uC5D0\uC11C \uBC84\uD2F0\uAE30"
+    sceneName: Mini_23_Rolling
     zone: 0
   - id: 24
     name: "\uC62C\uBC14\uB978 \uD3EC\uC988 \uCDE8\uD558\uAE30"
@@ -116,7 +116,7 @@ MonoBehaviour:
     zone: 0
   - id: 25
     name: "\uC0C9 \uB9DE\uCD94\uB294 \uAE30\uC5B5\uB825\uAC8C\uC784"
-    sceneName: 
+    sceneName: Mini_25_RememberColor
     zone: 0
   - id: 26
     name: "\uAF2C\uC778 \uBBF8\uB044\uB7FC\uD2C0 \uD0C0\uAE30"

@@ -12,16 +12,16 @@ EditorBuildSettings:
     path: Assets/Scenes/ARScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/MiniGame/Test1_Tracked.unity
+    path: Assets/Scenes/MiniGame/Mini_0_CreateRobot.unity
     guid: 064ca1703137bea45b92fae3f6b53788
   - enabled: 1
-    path: Assets/Scenes/MiniGame/Test2_Tracked.unity
+    path: Assets/Scenes/MiniGame/Mini_1_Planet.unity
     guid: 4e22e054facf4284584fa50844ffa686
   - enabled: 1
-    path: Assets/Scenes/MiniGame/Test3_Tracked.unity
+    path: Assets/Scenes/MiniGame/Mini_2_RepairRobot.unity
     guid: 098cc9c71ca54b746971d5a98e45364e
   - enabled: 1
-    path: Assets/Scenes/MiniGame/Test4_Tracked.unity
+    path: Assets/Scenes/MiniGame/Mini_4_ChargeEnergy.unity
     guid: d30fdc07b53ffa24285d80cb90ffcec8
   - enabled: 1
     path: Assets/Scenes/StoryScene.unity
