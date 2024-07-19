@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StoryScene.unity
+    guid: 72bfff06479d5014daf23f81d5f9bff1
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 002e837c48c0d044384b6c38f7a13bbb
   - enabled: 1
@@ -24,8 +27,23 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGame/Mini_4_ChargeEnergy.unity
     guid: d30fdc07b53ffa24285d80cb90ffcec8
   - enabled: 1
-    path: Assets/Scenes/StoryScene.unity
-    guid: 72bfff06479d5014daf23f81d5f9bff1
+    path: Assets/Scenes/MiniGame/Mini_3_GrabTool.unity
+    guid: a20661f2b64d0b14d951789674787cd4
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_5_YounTa.unity
+    guid: a92ebcf99dc948a41a7cadeee8bbc009
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_7_ConnectLine.unity
+    guid: e1a3be04353fc0341914632267ba171f
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_10_CardFlip.unity
+    guid: 3ff0f96fca745dc4b989ca347767230b
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_23_Rolling.unity
+    guid: a5c5a02ea32b6a241984427ffb581c77
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_25_RememberColor.unity
+    guid: 231ee2c6b2bb3b94f8d64e91dd5d8204
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8a9add529fe3a8b449d253cbe21f21f6, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 4bb97cf614bf67d469c311dd8200209c, type: 2}
