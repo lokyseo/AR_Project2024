@@ -23,6 +23,9 @@ public class Multiple_Tracking_Image : MonoBehaviour
 
     private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
 
+    [SerializeField]
+    private GameData gameData;
+
     private void Awake()
     {
         imgManager = GetComponent<ARTrackedImageManager>();
@@ -95,7 +98,8 @@ public class Multiple_Tracking_Image : MonoBehaviour
             {
                 if (name == "test" + i)
                 {
-                    SceneManager.LoadScene("Test" + i + "_Tracked");
+                    int id = Random.Range(0, 1);
+                    SceneManager.LoadScene(gameData.stages[id].sceneName);
                 }
             }
         }

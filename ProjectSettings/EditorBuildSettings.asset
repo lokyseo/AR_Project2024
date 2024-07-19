@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ARScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/BossStage/Boss_SpaceShip.unity
+    guid: 69f6bcbc5706af7408a05b48c1c071b8
+  - enabled: 1
     path: Assets/Scenes/MiniGame/Mini_0_CreateRobot.unity
     guid: 064ca1703137bea45b92fae3f6b53788
   - enabled: 1

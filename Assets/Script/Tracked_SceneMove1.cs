@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Tracked_SceneMove1 : MonoBehaviour
 {
     float timeCount;
-
     private void OnEnable()
     {
         timeCount = 1.0f;
@@ -25,15 +24,9 @@ public class Tracked_SceneMove1 : MonoBehaviour
         if (timeCount < 0.0f)
         {
             timeCount = 1.0f;
-            for(int i = 1; i < 5; i++)
-            {
-                if (this.gameObject.name.Contains("test" + i))
-                {
-                    this.gameObject.SetActive(false);
 
-                    SceneManager.LoadScene("Test" + i + "_Tracked");
-                }
-            }
+            SceneManager.LoadScene(3);
+
         }
     }
 }

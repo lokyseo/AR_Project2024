@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class Tracked_SceneMove : MonoBehaviour
 {
     float timeCount;
+    [SerializeField]
+    private GameData gameData;
+
     private void OnEnable()
     {
         timeCount = 1.0f;
@@ -24,13 +27,12 @@ public class Tracked_SceneMove : MonoBehaviour
         {
             timeCount = 1.0f;
             
-           // this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
+            int id = Random.Range(0, 1);
 
-           // SceneManager.LoadScene("Test1_Tracked");
-           // Camera.main.Reset();
+            SceneManager.LoadScene(gameData.stages[id].sceneName);
+            Camera.main.Reset();
 
         }
-
-
     }
 }
