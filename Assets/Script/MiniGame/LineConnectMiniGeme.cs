@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using TMPro;
+using UnityEditor;
 
 public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -14,21 +16,34 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
     GameObject clicked_Object;
     LineRenderer lineRenderer;
     Vector3[] linePosition = new Vector3[2];
-    public int connectCount;
+    public bool[] isConnect = new bool[4];
 
     public Image[] left_Image;
     public Image[] right_Image;
 
-    bool isSameColor;
+    public TextMeshProUGUI time_Text;
+    float clearTime;
 
     private void Awake()
     {
-        isSameColor = false;
-        connectCount = 0;
-
+        for(int i = 0; i < isConnect.Length; i++)
+        {
+            isConnect[i] = false;
+        }
+        clearTime = 10.0f;
         ResetColor();
     }
+    void Update()
+    {
+        clearTime -= Time.deltaTime;
+        time_Text.text = clearTime.ToString("F1");
 
+        if(clearTime < 0)
+        {
+            time_Text.text = "0.0";
+            SceneManager.LoadScene("MainScene");
+        }
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
         clicked_Object = eventData.pointerCurrentRaycast.gameObject;
@@ -38,16 +53,8 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
         linePosition[1] = linePosition[0];
         lineRenderer.SetPositions(linePosition);
 
-        if(lineRenderer.enabled)
-        {
-            isSameColor = true;
-        }
-        else
-        {
-            isSameColor = false;
-            lineRenderer.enabled = true;
-            
-        }
+        lineRenderer.enabled = true;
+
         lineRenderer.material.color = clicked_Object.GetComponent<Image>().color;
 
         lineRenderer.positionCount = linePosition.Length;
@@ -69,27 +76,50 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
             linePosition[1] = linePosition[0];
             lineRenderer.SetPositions(linePosition);
             lineRenderer.enabled = false;
-            Debug.Log("Null");
+
             return;
         }
-        else if(eventData.pointerCurrentRaycast.gameObject.tag == "LineConnect" &&
+        else if (eventData.pointerCurrentRaycast.gameObject.tag == "LineConnect" &&
             eventData.pointerCurrentRaycast.gameObject.GetComponent<Image>().color == lineRenderer.material.color)
         {
             linePosition[1] = eventData.pointerCurrentRaycast.gameObject.transform.position;
             lineRenderer.SetPositions(linePosition);
-            
-            
 
-            if(!isSameColor && !eventData.pointerCurrentRaycast.gameObject.GetComponentInChildren<LineRenderer>().enabled)
+            clicked_Object.GetComponent<Image>().raycastTarget = false;
+            eventData.pointerCurrentRaycast.gameObject.GetComponent<Image>().raycastTarget = false;
+
+            int connectCount = 0;
+
+            if (lineRenderer.material.color == Color.red)
             {
-                connectCount++;
-                eventData.pointerCurrentRaycast.gameObject.GetComponentInChildren<LineRenderer>().enabled = true;
-                if (connectCount == 4)
+                isConnect[0] = true;
+            }
+            else if (lineRenderer.material.color == Color.blue)
+            {
+                isConnect[1] = true;
+            }
+            else if (lineRenderer.material.color == Color.yellow)
+            {
+                isConnect[2] = true;
+            }
+            else if (lineRenderer.material.color == Color.green)
+            {
+                isConnect[3] = true;
+            }
+
+            for (int i = 0; i < isConnect.Length; i++)
+            {
+                if (isConnect[i])
                 {
-                    SceneManager.LoadScene("MainScene");
+                    connectCount++;
                 }
             }
-            
+            if (connectCount == 4)
+            {
+                SceneManager.LoadScene("MainScene");
+            }
+
+
         }
         else
         {
@@ -97,7 +127,7 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
             linePosition[1] = linePosition[0];
             lineRenderer.SetPositions(linePosition);
             lineRenderer.enabled = false;
-            Debug.Log("Else");
+
         }
 
     }

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class RunLeftRightCollision : MonoBehaviour
 {
     float moveSpeed;
+
 
     void Start()
     {
@@ -19,22 +21,9 @@ public class RunLeftRightCollision : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "Player")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
-        if (collision.transform.tag == "Failed")
+        if(collision.transform.tag == "Failed")
         {
             Destroy(this.gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.tag == "Player")
-        {
-
         }
     }
 

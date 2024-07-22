@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - LineConnect
   - Trap
+  - Count
   layers:
   - Default
   - TransparentFX
