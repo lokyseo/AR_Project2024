@@ -41,7 +41,7 @@ public class RaceManager : MonoBehaviour
 
     public void LeftButton()
     {
-        if(isLeftButton)
+        if (isLeftButton)
         {
             player_Object.transform.localPosition += Vector3.up * 15;
             isLeftButton = false;

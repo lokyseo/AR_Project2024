@@ -84,7 +84,7 @@ public class ElplodeManager : MonoBehaviour
 
         if (current_num == buttons.Count)
         {
-            Debug.Log("Å¬¸®¾î");
+            SceneManager.LoadScene("MainScene");
         }
     }
 

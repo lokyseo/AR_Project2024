@@ -12,6 +12,25 @@ public class LoadingScene : MonoBehaviour
 
     [SerializeField]
     public GameObject LoadingCanvas;
+
+    private void Start()
+    {
+        CutScene.SetActive(true);
+
+        StartCoroutine(NextSceneCo());
+    }
+
+
+    private IEnumerator NextSceneCo()
+    {
+        yield return new WaitForSeconds(3f);
+        animator.SetTrigger("Load");
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadSceneAsync("MainScene");
+    }
+    
+
     /*
         public static void CallLoading(string sceneName)
         {
