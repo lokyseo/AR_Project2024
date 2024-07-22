@@ -26,11 +26,6 @@ public class MainManager : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        
-    }
-
     public void OnClickCheckedClearButton()
     {
         panel_Object.SetActive(!panel_Object.activeSelf);
