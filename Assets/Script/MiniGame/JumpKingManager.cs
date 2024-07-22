@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,10 +13,14 @@ public class JumpKingManager : MonoBehaviour
 
     float jumpPower;
     bool isGround;
+
+    public Image[] player_Health;
+    int count_Health;
+    Vector3 startPosition;
     void Start()
     {
         Application.targetFrameRate = 60;
-
+        startPosition = transform.position;
         jumpPower = 0;
         isGround = true;
 
@@ -27,6 +32,11 @@ public class JumpKingManager : MonoBehaviour
 
     void Update()
     {
+        if (!player_Health[2].gameObject.activeSelf)
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -65,13 +75,16 @@ public class JumpKingManager : MonoBehaviour
     {
         if (collision.gameObject.name == "Goal")
         {
-            PlayerPrefs.SetInt("MiniGame2Clear", 1);
+            //PlayerPrefs.SetInt("MiniGame2Clear", 1);
             SceneManager.LoadScene("MainScene");
         }
 
         if (collision.gameObject.tag == "Failed")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            player_Health[count_Health].gameObject.SetActive(false);
+            count_Health++;
+            transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            transform.position = startPosition;
 
         }
 

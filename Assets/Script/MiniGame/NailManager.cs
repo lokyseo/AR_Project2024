@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NailManager : MonoBehaviour
 {
@@ -13,15 +15,25 @@ public class NailManager : MonoBehaviour
     bool isHammer;
     int collisionCount;
 
+    public Image[] player_Health;
+    int count_Health;
+
     void Start()
     {
         isHammer = false;
         isCollision = false;
         collisionCount = 0;
+
+        count_Health = 0;
     }
 
     void Update()
     {
+        if (!player_Health[2].gameObject.activeSelf)
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+
         board.transform.position += new Vector3(1, 0, 0) * Time.deltaTime;
 
         if (Input.touchCount > 0)
@@ -44,7 +56,8 @@ public class NailManager : MonoBehaviour
             {
                 if(!isCollision)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    player_Health[count_Health].gameObject.SetActive(false);
+                    count_Health++;
                 }
 
                 isHammer = false;

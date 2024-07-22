@@ -2,25 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RunLeftRight : MonoBehaviour
 {
     private Vector2 startTouchPosition, endTouchPosition;
     private float minSwipeDistance = 50f;
-    GameObject player_Object;
     public GameObject total_Obstacle;
 
     public GameObject obstacle;
     float spawnTime;
 
+    public Slider chase_Slider;
+
+    public Image[] player_Health;
+    int count_Health;
+    Vector3 startPosition;
+
     void Start()
     {
-        player_Object = GameObject.FindWithTag("Player");
         spawnTime = 1.0f;
     }
 
     void Update()
     {
+        if (!player_Health[2].gameObject.activeSelf)
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -73,26 +84,32 @@ public class RunLeftRight : MonoBehaviour
             {
                 if (direction.x > 0)
                 {
-                    //Vector3 targetPosition = new Vector3(360, player_Object.transform.position.y, player_Object.transform.position.z);
-                    //player_Object.transform.position = 
-                    //    Vector3.Lerp(player_Object.transform.position, targetPosition, 10.0f * Time.deltaTime);
-                    //
-                    //if (Vector3.Distance(player_Object.transform.position, targetPosition) < 0.01f)
-                    //{
-                    //    player_Object.transform.position = targetPosition;
-                    //}
-
-                    if (player_Object.transform.localPosition.x >= 360)
+                    if (transform.localPosition.x >= 360)
                         return;
-                    player_Object.transform.localPosition += new Vector3(360, 0, 0);
+                    transform.localPosition += new Vector3(360, 0, 0);
                 }
                 else
                 {
-                    if (player_Object.transform.localPosition.x <= -360)
+                    if (transform.localPosition.x <= -360)
                         return;
-                    player_Object.transform.localPosition += new Vector3(-360, 0, 0);
+                    transform.localPosition += new Vector3(-360, 0, 0);
                 }
             }
         }
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Trap")
+        {
+            player_Health[count_Health].gameObject.SetActive(false);
+            count_Health++;
+
+            Destroy(collision.gameObject);
+        }
+
+    }
+
+    
 }

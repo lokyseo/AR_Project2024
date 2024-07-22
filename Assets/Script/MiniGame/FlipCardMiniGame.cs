@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,14 +12,34 @@ public class FlipCardMiniGame : MonoBehaviour
     string checked_Same;
     bool touchBlocked;
 
+    public Sprite[] sprite_Source;
+    public GameObject totalCard;
+
+    public TextMeshProUGUI time_Text;
+    float clearTime;
+
     void Start()
     {
         touchCount = 0;
         touchBlocked = false;
+
+        clearTime = 30.0f;
+
+        RandomCard();
+
     }
 
     void Update()
     {
+        clearTime -= Time.deltaTime;
+        time_Text.text = clearTime.ToString("F1");
+
+        if(clearTime < 0)
+        {
+            time_Text.text = "0.0";
+            SceneManager.LoadScene("MainScene");
+        }
+
         if (touchCount >= 2)
         {
             touchBlocked = true;
@@ -102,4 +122,38 @@ public class FlipCardMiniGame : MonoBehaviour
        
     }
 
+
+    void RandomCard()
+    {
+        int[] count_array = new int[10];
+        for (int i = 0; i < count_array.Length; i++)
+        {
+            count_array[i] = 0;
+        }
+
+       
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j = 0; j < 2;)
+            {
+                int firstRand = Random.Range(0, 10);
+
+                if (count_array[firstRand] == 1)
+                {
+
+                }
+                else
+                {
+                    totalCard.transform.GetChild(firstRand).GetComponentInChildren<SpriteRenderer>().sprite = sprite_Source[i];
+                    count_array[firstRand] = 1;
+                    j++;
+                }
+                
+            }
+            
+        }
+        
+
+        
+    }
 }
