@@ -16,7 +16,7 @@ public class ElplodeManager : MonoBehaviour
     public Image count_Image;
     //public GameObject card_Prefab;
 
-
+     
     //GameObject[] test = new GameObject[20];
     //int rand_num;
     //int[] number_Array = new int[20];
@@ -35,7 +35,7 @@ public class ElplodeManager : MonoBehaviour
     private List<GameObject> robotParts = new List<GameObject>();
 
     public UnityEvent gameStart;
-
+                
     void Start()
     {
         current_num = 0;

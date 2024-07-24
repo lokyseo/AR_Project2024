@@ -11,6 +11,7 @@ TagManager:
   - LineConnect
   - Trap
   - Count
+  - Block
   layers:
   - Default
   - TransparentFX

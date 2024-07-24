@@ -43,6 +43,7 @@ public class BuildTopTiming_MiniGame : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 Invoke("SpawnObject", 0.5f);
+                
             }
 
 
