@@ -156,38 +156,212 @@ MonoBehaviour:
     zone: 0
   items:
   - id: 0
-    name: "\uB85C\uBD07\uD1A0\uD53C\uC544A"
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 A"
     description: "\uC544\uC774\uD15C 01\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test1.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 0100000002000000030000000400000005000000
   - id: 1
-    name: "\uB85C\uBD07\uD1A0\uD53C\uC544B"
+    name: "\uC544\uC774\uD15C 01\uBC88\uC774\uB2E4"
     description: "\uC544\uC774\uD15C 02\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test2.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
   - id: 2
-    name: "\uD4E8\uCCD0\uC874A"
+    name: "\uC544\uC774\uD15C 02\uBC88\uC774\uB2E4"
     description: "\uC544\uC774\uD15C 03\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test3.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
   - id: 3
-    name: "\uD45C\uCCD0\uC874B"
+    name: "\uC544\uC774\uD15C 03\uBC88\uC774\uB2E4"
     description: "\uC544\uC774\uD15C 04\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test4.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
   - id: 4
-    name: "\uC5B4\uB4DC\uBC34\uCC98A"
+    name: "\uC544\uC774\uD15C 04\uBC88\uC774\uB2E4"
     description: "\uC544\uC774\uD15C 05\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test5.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
   - id: 5
-    name: "\uC5B4\uB4DC\uBC34\uCC98B"
+    name: "\uC544\uC774\uD15C 05\uBC88\uC774\uB2E4"
     description: "\uC544\uC774\uD15C 06\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test6.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
   - id: 6
-    name: "\uB4DC\uB9BC\uC874A"
-    description: "\uC544\uC774\uD15C 07\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test7.jpg
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 B"
+    description: 
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 
   - id: 7
-    name: "\uB4DC\uB9BC\uC874B"
-    description: "\uC544\uC774\uD15C 08\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test8.jpg
+    name: "\uC544\uC774\uD15C 06\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 07\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
   - id: 8
-    name: "Boss\uC544\uC774\uD15C"
+    name: "\uC544\uC774\uD15C 07\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 08\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 9
+    name: "\uC544\uC774\uD15C 08\uBC88\uC774\uB2E4"
     description: "\uC544\uC774\uD15C 09\uBC88\uC774\uB2E4"
-    imageAddress: Assets/Image/test9.jpg
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 10
+    name: "\uC544\uC774\uD15C 09\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 10\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 11
+    name: "\uC544\uC774\uD15C 10\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 11\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 12
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 C"
+    description: 
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 0d0000000e0000000f0000001000000011000000
+  - id: 13
+    name: "\uC544\uC774\uD15C 11\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 12\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 14
+    name: "\uC544\uC774\uD15C 12\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 13\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 15
+    name: "\uC544\uC774\uD15C 13\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 14\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 16
+    name: "\uC544\uC774\uD15C 14\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 15\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 17
+    name: "\uC544\uC774\uD15C 15\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 16\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 18
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 D"
+    description: 
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 1300000014000000150000001600000017000000
+  - id: 19
+    name: "\uC544\uC774\uD15C 16\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 17\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 20
+    name: "\uC544\uC774\uD15C 17\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 18\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 21
+    name: "\uC544\uC774\uD15C 18\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 19\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 22
+    name: "\uC544\uC774\uD15C 19\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 20\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 23
+    name: "\uC544\uC774\uD15C 20\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 21\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 24
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 E"
+    description: 
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 190000001a0000001b0000001c0000001d000000
+  - id: 25
+    name: "\uC544\uC774\uD15C 21\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 22\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 26
+    name: "\uC544\uC774\uD15C 22\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 23\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 27
+    name: "\uC544\uC774\uD15C 23\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 24\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 28
+    name: "\uC544\uC774\uD15C 24\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 25\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 29
+    name: "\uC544\uC774\uD15C 25\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 26\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 30
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 F"
+    description: 
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 1f00000020000000210000002200000023000000
+  - id: 31
+    name: "\uC544\uC774\uD15C 26\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 27\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 32
+    name: "\uC544\uC774\uD15C 27\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 28\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 33
+    name: "\uC544\uC774\uD15C 28\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 29\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 34
+    name: "\uC544\uC774\uD15C 29\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 30\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 35
+    name: "\uC544\uC774\uD15C 30\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 31\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 36
+    name: "\uC6B0\uC8FC\uC120 \uBD80\uD488 G"
+    description: 
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    needPartID: 2500000026000000270000002800000029000000
+  - id: 37
+    name: "\uC544\uC774\uD15C 31\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 32\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 38
+    name: "\uC544\uC774\uD15C 32\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 33\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 39
+    name: "\uC544\uC774\uD15C 33\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 34\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 40
+    name: "\uC544\uC774\uD15C 34\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 35\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 
+  - id: 41
+    name: "\uC544\uC774\uD15C 35\uBC88\uC774\uB2E4"
+    description: "\uC544\uC774\uD15C 36\uBC88\uC774\uB2E4"
+    imageAddress: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    needPartID: 

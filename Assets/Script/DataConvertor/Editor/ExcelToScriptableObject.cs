@@ -7,7 +7,8 @@ using ExcelDataReader;
 using System.IO;
 using System;
 using System.Reflection;
-using NUnit.Framework;
+using Jack;
+
 public class ExcelToScriptableObject
 {
     [MenuItem("GameData/Create")]
@@ -182,7 +183,8 @@ public class ExcelToScriptableObject
                         }
 
                         continue;
-                    } else if (field.FieldType.IsAssignableFrom(typeof(IParsable)))                    // structre or Class일경우 즉 기본타입이 아닌경우 각각Parse를 내부에 구현
+                    } 
+                    else if (field.FieldType.IsAssignableFrom(typeof(IParsable)))                    // structre or Class일경우 즉 기본타입이 아닌경우 각각Parse를 내부에 구현
                     {
                         var parsable = (IParsable)Activator.CreateInstance(field.FieldType);
                         parsable.Parse(value.ToString());
@@ -201,7 +203,7 @@ public class ExcelToScriptableObject
                 {
                     if (e == new NullReferenceException())
                     {
-                        Debug.Log("");
+                        Debug.Log("파일변형중 오류");
                     }
                 }
 

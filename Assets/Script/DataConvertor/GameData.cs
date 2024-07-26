@@ -14,6 +14,9 @@ public class GameData : ScriptableObject
 #endif    
     public List<Stage> stages;
 
+#if UNITY_EDITOR
+    [ArrayElementTitle("name")]
+#endif    
     public List<Item> items;
 }
 

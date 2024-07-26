@@ -9,4 +9,5 @@ public class Item
     public string name;
     public string description;
     public string imageAddress;
+    public List<int> needPartID;
 }

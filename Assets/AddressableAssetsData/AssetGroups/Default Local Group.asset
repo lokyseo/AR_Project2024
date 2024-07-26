@@ -22,6 +22,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11ce0b18a33b66d4d9d79716ffc1c89d
+    m_Address: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/UX_mini_09_Robot.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d4bc0fcea3d4a84f82be28230250001
+    m_Address: Assets/Image/UX/MiniGame/UX_MiniGmae_09_MakeRobot/RoboParts_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 850b53e62c74ad14d95b6773c04194a1, type: 2}
   m_SchemaSet:
