@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LineDrawManager : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
-    private List<Vector3> points;
+    LineRenderer lineRenderer;
+
+    private List<Transform> points = new List<Transform>();
+    private bool isDrawing = false;
+
+    public GameObject[] dots_Object;
+    GameObject nowConnected_Object;
+    int lineCount;
+
     void Start()
     {
         lineRenderer = gameObject.GetComponent<LineRenderer>();
-        lineRenderer.widthMultiplier = 0.1f;
+        lineRenderer.widthMultiplier = 20.0f;
         lineRenderer.positionCount = 0;
-        points = new List<Vector3>();
     }
 
     void Update()
@@ -21,23 +28,81 @@ public class LineDrawManager : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+
             if (touch.phase == TouchPhase.Began)
             {
-                points.Clear();
-                lineRenderer.positionCount = 0;
+                if (hit.collider != null && hit.collider.gameObject.CompareTag("Point"))
+                {
+                    nowConnected_Object = hit.collider.gameObject;
+
+                    points.Add(hit.transform);
+                    lineRenderer.positionCount = points.Count;
+                    lineRenderer.SetPosition(points.Count - 1, hit.transform.position);
+                    isDrawing = true;
+                }
             }
 
-            if (touch.phase == TouchPhase.Moved)
+            if (touch.phase == TouchPhase.Moved && isDrawing)
             {
-                Vector3 mousePos = Input.mousePosition;
-                mousePos.z = 10f; // 카메라에서의 거리
-                Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-
-                if (points.Count == 0 || Vector3.Distance(points[points.Count - 1], worldPos) > 0.1f)
+                if (hit.collider != null && hit.collider.gameObject.CompareTag("Point") &&
+                    nowConnected_Object.GetComponent<Dots_Property>().nearDots.Contains(hit.collider.gameObject))
                 {
-                    points.Add(worldPos);
-                    lineRenderer.positionCount = points.Count;
-                    lineRenderer.SetPositions(points.ToArray());
+                    bool isAlreadyConnected = false;
+                    for (int i = 0; i < lineRenderer.positionCount - 1; i++)
+                    {
+                        Vector3 start = lineRenderer.GetPosition(i);
+                        Vector3 end = lineRenderer.GetPosition(i + 1);
+
+                        if ((nowConnected_Object.transform.position == start && hit.transform.position == end) ||
+                            (nowConnected_Object.transform.position == end && hit.transform.position == start))
+                        {
+                            isAlreadyConnected = true;
+                        }
+                    }
+
+                    if(!isAlreadyConnected)
+                    {
+                        nowConnected_Object = hit.collider.gameObject;
+
+                        points.Add(hit.transform);
+                        lineRenderer.positionCount = points.Count;
+                        lineRenderer.SetPosition(points.Count - 1, hit.collider.gameObject.transform.position);
+                        lineCount++;
+
+                        if(lineCount >= 6)
+                        {
+                            SceneManager.LoadScene("MainScene");
+                        }
+
+                    }
+                    else
+                    {
+                        lineRenderer.positionCount = points.Count + 1;
+                        lineRenderer.SetPosition(points.Count, mousePos);
+                    }
+                }
+                else
+                {
+                    lineRenderer.positionCount = points.Count + 1;
+                    lineRenderer.SetPosition(points.Count, mousePos);
+                }
+
+            }
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                if (isDrawing && lineCount < 6)
+                {
+                    lineCount = 0; 
+                    lineRenderer.positionCount = 0;
+                    points.Clear();
+                    for (int i = 0; i < dots_Object.Length; i++)
+                    {
+                        dots_Object[i].GetComponent<Dots_Property>().isFailed = true;
+                    }
+                    isDrawing = false;
                 }
             }
         }
