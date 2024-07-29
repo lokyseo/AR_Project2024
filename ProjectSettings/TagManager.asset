@@ -13,6 +13,7 @@ TagManager:
   - Count
   - Block
   - Point
+  - Container
   layers:
   - Default
   - TransparentFX
