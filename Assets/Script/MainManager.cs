@@ -6,30 +6,56 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    public Image[] checkedClear_ImageArray;
-    public GameObject panel_Object;
-    
-    void Start()
+    [SerializeField]
+    SaveData saveData;
+
+    private void Start()
     {
-        for(int i = 0; i < checkedClear_ImageArray.Length; i++)
+        if (saveData == null)
         {
-            if (PlayerPrefs.GetInt("MiniGame" + (i + 1) + "Clear", 0) != 0)
-            {
-                checkedClear_ImageArray[i].color = Color.green;
-            }
-            else
-            {
-                checkedClear_ImageArray[i].color = Color.red;
-
-            }
+            saveData = new SaveData();
+            SaveSystem.DataSave(saveData);
         }
-        
+        saveData = SaveSystem.DataLoad();
+
+
     }
 
-    public void OnClickCheckedClearButton()
-    {
-        panel_Object.SetActive(!panel_Object.activeSelf);
-    }
+
+
+
+
+
+
+
+
+
+    /*어디에 쓰는거징
+     * 
+     * public Image[] checkedClear_ImageArray;
+        public GameObject panel_Object;
+
+        void Start()
+        {
+            for(int i = 0; i < checkedClear_ImageArray.Length; i++)
+            {
+                if (PlayerPrefs.GetInt("MiniGame" + (i + 1) + "Clear", 0) != 0)
+                {
+                    checkedClear_ImageArray[i].color = Color.green;
+                }
+                else
+                {
+                    checkedClear_ImageArray[i].color = Color.red;
+
+                }
+            }
+
+        }
+
+        public void OnClickCheckedClearButton()
+        {
+            panel_Object.SetActive(!panel_Object.activeSelf);
+        }*/
 
     public void OnClickCameraButton()
     {
