@@ -8,12 +8,15 @@ TagManager:
   - Card
   - Failed
   - Ground
-  - LineConnect
   - Trap
   - Count
   - Block
   - Point
   - Container
+  - Red
+  - Green
+  - Yellow
+  - Blue
   layers:
   - Default
   - TransparentFX

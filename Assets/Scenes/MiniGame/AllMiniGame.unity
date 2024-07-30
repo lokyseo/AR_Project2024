@@ -2850,7 +2850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &770875726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4287,6 +4287,8 @@ MonoBehaviour:
   - {fileID: 258363692}
   - {fileID: 1878562828}
   - {fileID: 394999392}
+  left_Sprite: []
+  right_Sprite: []
   time_Text: {fileID: 0}
 --- !u!1 &1052026650
 GameObject:
@@ -7236,7 +7238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1645307826
 RectTransform:
   m_ObjectHideFlags: 0

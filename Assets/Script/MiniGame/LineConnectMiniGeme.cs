@@ -21,6 +21,9 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
     public Image[] left_Image;
     public Image[] right_Image;
 
+    public Sprite[] left_Sprite;
+    public Sprite[] right_Sprite;
+
     public TextMeshProUGUI time_Text;
     float clearTime;
 
@@ -55,7 +58,26 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
 
         lineRenderer.enabled = true;
 
-        lineRenderer.material.color = clicked_Object.GetComponent<Image>().color;
+       
+        switch (clicked_Object.tag)
+        {
+            case "Red":
+                lineRenderer.material.color = Color.red;
+                //lineRenderer.startColor = Color.red;
+                //lineRenderer.endColor = Color.red;
+                break;
+            case "Blue":
+                lineRenderer.material.color = Color.blue;
+                break ;
+            case "Yellow":
+                lineRenderer.material.color = Color.yellow;
+                break;
+            case "Green":
+                lineRenderer.material.color = Color.green;
+                break;
+        }
+
+        lineRenderer.tag = clicked_Object.tag;
 
         lineRenderer.positionCount = linePosition.Length;
 
@@ -79,8 +101,7 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
 
             return;
         }
-        else if (eventData.pointerCurrentRaycast.gameObject.tag == "LineConnect" &&
-            eventData.pointerCurrentRaycast.gameObject.GetComponent<Image>().color == lineRenderer.material.color)
+        else if (eventData.pointerCurrentRaycast.gameObject.tag == lineRenderer.tag)
         {
             linePosition[1] = eventData.pointerCurrentRaycast.gameObject.transform.position;
             lineRenderer.SetPositions(linePosition);
@@ -90,19 +111,19 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
 
             int connectCount = 0;
 
-            if (lineRenderer.material.color == Color.red)
+            if (lineRenderer.tag == "Red")
             {
                 isConnect[0] = true;
             }
-            else if (lineRenderer.material.color == Color.blue)
+            else if (lineRenderer.tag == "Blue")
             {
                 isConnect[1] = true;
             }
-            else if (lineRenderer.material.color == Color.yellow)
+            else if (lineRenderer.tag == "Yellow")
             {
                 isConnect[2] = true;
             }
-            else if (lineRenderer.material.color == Color.green)
+            else if (lineRenderer.tag == "Green")
             {
                 isConnect[3] = true;
             }
@@ -155,46 +176,56 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
                 else
                 {
                     color_Array[i] = randNum;
+                    
+
                     switch (randNum)
                     {
                         case 0:
                             if (j == 0)
                             {
-                                left_Image[i].color = Color.red;
+                                left_Image[i].sprite = left_Sprite[randNum];
+                                left_Image[i].tag = "Red";
                             }
                             else
                             {
-                                right_Image[i].color = Color.red;
+                                right_Image[i].tag = "Red";
+                                right_Image[i].sprite = right_Sprite[randNum];
                             }
                             break;
                         case 1:
                             if (j == 0)
                             {
-                                left_Image[i].color = Color.blue;
+                                left_Image[i].tag = "Blue";
+                                left_Image[i].sprite = left_Sprite[randNum];
                             }
                             else
                             {
-                                right_Image[i].color = Color.blue;
+                                right_Image[i].tag = "Blue";
+                                right_Image[i].sprite = right_Sprite[randNum];
                             }
                             break;
                         case 2:
                             if (j == 0)
                             {
-                                left_Image[i].color = Color.yellow;
+                                left_Image[i].tag = "Yellow";
+                                left_Image[i].sprite = left_Sprite[randNum];
                             }
                             else
                             {
-                                right_Image[i].color = Color.yellow;
+                                right_Image[i].tag = "Yellow";
+                                right_Image[i].sprite = right_Sprite[randNum];
                             }
                             break;
                         case 3:
                             if (j == 0)
                             {
-                                left_Image[i].color = Color.green;
+                                left_Image[i].tag = "Green";
+                                left_Image[i].sprite = left_Sprite[randNum];
                             }
                             else
                             {
-                                right_Image[i].color = Color.green;
+                                right_Image[i].tag = "Green";
+                                right_Image[i].sprite = right_Sprite[randNum];
                             }
                             break;
                     }
