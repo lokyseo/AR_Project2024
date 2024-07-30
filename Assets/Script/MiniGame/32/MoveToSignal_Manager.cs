@@ -17,6 +17,7 @@ public class MoveToSignal_Manager : MonoBehaviour
         player_Object = GameObject.FindWithTag("Player");
         signal_Image.color = Color.green;
         isColorRed = false;
+        durationTime = 2.0f;
         moveSpeed = 2.0f;
     }
 

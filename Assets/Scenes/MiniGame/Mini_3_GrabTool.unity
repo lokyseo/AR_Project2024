@@ -393,7 +393,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 1663dd5de87c308489e4e5fb76e7f3de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02c085c6b78f7b14c941a626b8804c4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -448,8 +448,8 @@ MonoBehaviour:
   - {fileID: 750243314}
   - {fileID: 364373923}
   hand_Object: {fileID: 1655884089}
-  handImage_Defalt: {fileID: 21300000, guid: d328f962da7f90045a0fc9da26c43c1b, type: 3}
-  handImage_Grap: {fileID: 21300000, guid: ae0bde78755227e4f8bff7c06312bddf, type: 3}
+  handImage_Defalt: {fileID: 21300000, guid: 7f0180fff92e4974389621accbe9a516, type: 3}
+  handImage_Grap: {fileID: 21300000, guid: f6d26a49daa938649a62ec49886fe83b, type: 3}
   count_Image: {fileID: 1126687168}
 --- !u!1 &750243312
 GameObject:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d328f962da7f90045a0fc9da26c43c1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f0180fff92e4974389621accbe9a516, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
