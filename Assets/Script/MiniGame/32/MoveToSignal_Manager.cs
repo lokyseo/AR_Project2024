@@ -18,7 +18,7 @@ public class MoveToSignal_Manager : MonoBehaviour
         signal_Image.color = Color.green;
         isColorRed = false;
         durationTime = 2.0f;
-        moveSpeed = 2.0f;
+        moveSpeed = 0.5f;
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class MoveToSignal_Manager : MonoBehaviour
             }
             if (touch.phase == TouchPhase.Ended)
             {
-                moveSpeed = 2.0f;
+                moveSpeed = 0.5f;
 
             }
 
@@ -59,7 +59,7 @@ public class MoveToSignal_Manager : MonoBehaviour
 
             if (moveSpeed > 0)
             {
-                Debug.Log("ав╬Н╤С");
+                Debug.Log("╩Ю~~~~~~~~~~~");
             }
         }
         else
@@ -76,21 +76,22 @@ public class MoveToSignal_Manager : MonoBehaviour
     {
         durationTime = 100;
         signal_Image.color = Color.yellow;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         int randnum = Random.Range(0, 9);
 
         if (randnum < 4)
         {
             isColorRed = false;
             signal_Image.color = Color.green;
+            durationTime = Random.Range(2.5f, 5.0f);
+
 
         }
         else
         {
             isColorRed = true;
             signal_Image.color = Color.red;
-
+            durationTime = Random.Range(1.0f, 3.0f);
         }
-        durationTime = Random.Range(1.5f, 4.0f);
     }
 }
