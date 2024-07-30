@@ -10,6 +10,9 @@ public class SpaceShipSlot : MonoBehaviour
     [SerializeField]
     GameData gameData;
 
+    [SerializeField]
+    SaveData saveData;
+
     public void Initalsize(Item item)
     {
         LoadSprite(item.imageAddress, this.gameObject.transform.GetChild(0).GetComponent<Image>());
