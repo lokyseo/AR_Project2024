@@ -18,6 +18,7 @@ public class LineDrawManager : MonoBehaviour
     void Start()
     {
         lineRenderer = gameObject.GetComponent<LineRenderer>();
+        lineRenderer.material.color = Color.black;
         lineRenderer.widthMultiplier = 20.0f;
         lineRenderer.positionCount = 0;
     }
