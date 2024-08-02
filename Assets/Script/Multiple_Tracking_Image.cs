@@ -93,12 +93,13 @@ public class Multiple_Tracking_Image : MonoBehaviour
             spawned.SetActive(true);
             session.Reset();
 
-            for(int i = 1; i < 5; i++)
+            for(int i = 1; i <= 10; i++)
             {
                 if (name == "test" + i)
                 {
-                    int id = Random.Range(0, 1);
-                    SceneManager.LoadScene(gameData.stages[id].sceneName);
+                    int id = Random.Range(3, 13);
+                    //SceneManager.LoadScene(gameData.stages[id].sceneName);
+                    SceneManager.LoadScene(id);
                 }
             }
         }

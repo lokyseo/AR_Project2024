@@ -64,7 +64,6 @@ public class FlipCardMiniGame : MonoBehaviour
                             SceneManager.LoadScene("MainScene");
                         }
                     }
-
                 }
                 else
                 {

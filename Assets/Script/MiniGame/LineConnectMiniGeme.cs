@@ -55,16 +55,12 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
         linePosition[0] = clicked_Object.transform.position;
         linePosition[1] = linePosition[0];
         lineRenderer.SetPositions(linePosition);
-
         lineRenderer.enabled = true;
-
        
         switch (clicked_Object.tag)
         {
             case "Red":
                 lineRenderer.material.color = Color.red;
-                //lineRenderer.startColor = Color.red;
-                //lineRenderer.endColor = Color.red;
                 break;
             case "Blue":
                 lineRenderer.material.color = Color.blue;
@@ -78,9 +74,7 @@ public class LineConnectMiniGeme : MonoBehaviour, IPointerDownHandler, IPointerU
         }
 
         lineRenderer.tag = clicked_Object.tag;
-
         lineRenderer.positionCount = linePosition.Length;
-
     }
 
     public void OnDrag(PointerEventData eventData)
