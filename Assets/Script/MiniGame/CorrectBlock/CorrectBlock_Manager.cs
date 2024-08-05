@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class CorrectBlock_Manager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -14,17 +15,35 @@ public class CorrectBlock_Manager : MonoBehaviour, IPointerDownHandler, IPointer
 
     public int countBool;
 
-    Vector3 lastMousePosition;
-
+    bool[] clearBool;
 
     void Start()
     {
-
+        clearBool = new bool[totalGround_Object.transform.childCount];
+        for (int i = 0; i < totalGround_Object.transform.childCount; i++)
+        {
+            clearBool[i] = false;
+        }
     }
 
     void Update()
     {
+        for(int i = 0; i < totalGround_Object.transform.childCount; i++)
+        {
+            if(totalGround_Object.transform.GetChild(i).GetComponent<OverlapBlock>().isFool)
+            {
+                clearBool[i] = true;
+            }
+        }
 
+        if(clicked_Object != null && clearBool.All(value => value))
+        {
+            Invoke("ClearAndSceneMove", 1.0f);
+        }
+    }
+    void ClearAndSceneMove()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 
     public void OnPointerDown(PointerEventData eventData)
