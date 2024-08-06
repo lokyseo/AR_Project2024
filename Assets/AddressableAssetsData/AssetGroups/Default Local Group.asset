@@ -32,6 +32,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 352cd687d079d734a81fdc8337091d58
+    m_Address: Assets/Image/UX/UX_TestPart.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 232548693f701b94ba3fde34315431bb
+    m_Address: Assets/Image/UX/UX_TestParts01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 025c7ed1f7209a04abccd3a3def57b3b
+    m_Address: Assets/Image/UX/UX_TestParts02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 850b53e62c74ad14d95b6773c04194a1, type: 2}
   m_SchemaSet:
