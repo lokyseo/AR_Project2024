@@ -17,11 +17,12 @@ MonoBehaviour:
     name: "\uBCBC\uB9AC"
     description: "\uC5EC\uAE34 \uC5B4\uB514\uC9C0?"
   - id: 2
-    name: "\uB85C\uBD07\uB79C\uB4DC 1"
-    description: "\uB300\uC0AC\uAC00 \uC5C6\uB2E4!"
+    name: "\uB85C\uBCF4\uBAA8"
+    description: "\uC090\uBE45! \uC0DD\uBA85\uBC18\uC751 \uAC10\uC9C0! \uC0DD\uBA85\uBC18\uC751
+      \uAC10\uC9C0!"
   - id: 3
     name: "\uB85C\uBD07\uB79C\uB4DC 2"
-    description: "\uADF8\uB798!"
+    description: Test
   - id: 4
     name: "\uB85C\uBD07\uB79C\uB4DC 3"
     description: A
