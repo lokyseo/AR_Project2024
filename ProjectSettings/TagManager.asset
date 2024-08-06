@@ -17,6 +17,9 @@ TagManager:
   - Green
   - Yellow
   - Blue
+  - Left
+  - Center
+  - Right
   layers:
   - Default
   - TransparentFX
