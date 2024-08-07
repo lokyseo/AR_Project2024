@@ -317,7 +317,7 @@ MonoBehaviour:
   - {fileID: 154945757}
   correct_Image: {fileID: 21300000, guid: 12c4329195669aa42824243578ad3ad2, type: 3}
   wrong_Image: {fileID: 21300000, guid: 28566f99a1e9d8e40ac1ec5cd5d15706, type: 3}
-  isGameStart: 0
+  isGameStart: 1
 --- !u!114 &717108045
 MonoBehaviour:
   m_ObjectHideFlags: 0

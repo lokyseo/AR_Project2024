@@ -39,7 +39,7 @@ MonoBehaviour:
     zone: 0
   - id: 6
     name: "\uBE14\uB7ED\uB9DE\uCD94\uAE30"
-    sceneName: 
+    sceneName: Mini_6_Set_Block
     zone: 0
   - id: 7
     name: "\uC0C9\uC0C1\uB9DE\uCDB0 \uC120\uC5F0\uACB0\uD558\uAE30"
@@ -83,11 +83,11 @@ MonoBehaviour:
     zone: 0
   - id: 17
     name: "\uC57C\uBC14\uC704"
-    sceneName: 
+    sceneName: Mini_17_Swaped_Cup
     zone: 0
   - id: 18
     name: "\uC6B4\uC11D \uBD80\uC218\uAE30"
-    sceneName: 
+    sceneName: Mini_18_CrushMeteor
     zone: 0
   - id: 19
     name: "\uC88C\uC6B0\uC774\uB3D9\uC73C\uB85C \uD53C\uD558\uAE30"
@@ -96,7 +96,7 @@ MonoBehaviour:
   - id: 20
     name: "\uC62C\uBC14\uB978 \uBAA8\uC591\uC758 \uC704\uCE58\uC5D0 \uBE14\uB7ED
       \uC815\uB9AC\uD558\uAE30"
-    sceneName: 
+    sceneName: Mini_20_ClearTools
     zone: 0
   - id: 21
     name: "\uC88C\uC6B0 \uC815\uB9AC\uD558\uAE30"
@@ -111,8 +111,8 @@ MonoBehaviour:
     sceneName: Mini_23_Rolling
     zone: 0
   - id: 24
-    name: "\uC62C\uBC14\uB978 \uD3EC\uC988 \uCDE8\uD558\uAE30"
-    sceneName: 
+    name: "\uC790\uC11D\uC73C\uB85C \uBB3C\uAC74\uBE7C\uAE30"
+    sceneName: Mini_24_Magnet
     zone: 0
   - id: 25
     name: "\uC0C9 \uB9DE\uCD94\uB294 \uAE30\uC5B5\uB825\uAC8C\uC784"
@@ -124,7 +124,7 @@ MonoBehaviour:
     zone: 0
   - id: 27
     name: "\uD55C\uBD93\uADF8\uB9AC\uAE30"
-    sceneName: 
+    sceneName: Mini_27_DrawLine
     zone: 0
   - id: 28
     name: "\uBE44\uBCBC\uC11C \uAE30\uB984\uCE60\uD558\uAE30"

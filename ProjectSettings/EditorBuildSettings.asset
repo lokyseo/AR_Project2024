@@ -45,6 +45,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGame/Mini_23_Rolling.unity
     guid: a5c5a02ea32b6a241984427ffb581c77
   - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_25_RememberColor.unity
+    guid: 231ee2c6b2bb3b94f8d64e91dd5d8204
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_20_ClearTools.unity
+    guid: df7086e400f3eb14ca0fb7d5a517dbca
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_18_CrushMeteor.unity
+    guid: 681829880a176cb4c9338443f6559f87
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_27_DrawLine.unity
+    guid: fb948503b01ae754cb7877c40fd6af40
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Mini_6_Set_Block.unity
+    guid: e8a4b10eeb454244f886ce131b80360c
+  - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 46efc4ffd98a6c64d88db1c08adc940e
   m_configObjects:
