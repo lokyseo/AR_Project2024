@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/MiniGame_Prefab/Baket.meta
 guid: bd381bcb5bffbc645b7452f04f2749e7
 folderAsset: yes
+========
+guid: 80e1a817e7fbbef4f8873dbfbb25ba6d
+>>>>>>>> 320634512a2aced73a66e97ddc22179ef21c5697:Assets/Scenes/Map.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
