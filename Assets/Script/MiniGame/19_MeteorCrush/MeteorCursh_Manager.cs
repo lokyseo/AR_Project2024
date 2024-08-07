@@ -41,7 +41,7 @@ public class MeteorCursh_Manager : MonoBehaviour
                         Destroy(hit.collider);
                         countDestroy++;
 
-                        if(countDestroy >= 20)
+                        if(countDestroy >= 10)
                         {
                             SceneManager.LoadScene("MainScene");
                         }
