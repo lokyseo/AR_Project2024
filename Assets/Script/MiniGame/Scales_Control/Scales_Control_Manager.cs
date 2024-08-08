@@ -4,18 +4,33 @@ using UnityEngine;
 
 public class Scales_Control_Manager : MonoBehaviour
 {
-    public Transform leftPan; // 왼쪽 저울판 위치
-    public Transform rightPan; // 오른쪽 저울판 위치
-    public Rigidbody2D leftWeight; // 왼쪽 저울추
-    public Rigidbody2D rightWeight; // 오른쪽 저울추
+    public GameObject leftUnder;
+    public GameObject rightUnder;
+
+    public GameObject supportStick;
+
+    float lockPosition;
+
+    bool isComplete;
+    public float left;
+    public float right;
+    private void Start()
+    {
+        lockPosition = leftUnder.transform.position.x;
+        isComplete = false;
+    }
 
     private void Update()
     {
-        float leftMoment = leftWeight.mass * (leftPan.position.x - leftWeight.position.x);
-        float rightMoment = rightWeight.mass * (rightWeight.position.x - rightPan.position.x);
+        left = leftUnder.GetComponent<Rigidbody2D>().mass;
+        right = rightUnder.GetComponent<Rigidbody2D>().mass;
 
-        float rotationAmount = leftMoment - rightMoment;
+        leftUnder.transform.position = new Vector3(lockPosition, leftUnder.transform.position.y, -1);
+        rightUnder.transform.position = new Vector3(-lockPosition, rightUnder.transform.position.y, -1);
 
-        transform.rotation = Quaternion.Euler(0, 0, rotationAmount);
+        //if(supportStick.transform.rotation.z < 2 && supportStick.transform.rotation.z > 2 && isComplete)
+        //{
+        //
+        //}
     }
 }
